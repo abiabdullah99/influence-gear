@@ -1,0 +1,98 @@
+/*---------
+    Fonts  
+-----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
+
+/* common styles or utilities */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+/*--------------------
+    Navbar Area Style  
+----------------------*/
+
+.container{
+    max-width: 1300px;
+    margin: 40px auto;
+    margin-bottom: 100px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-tite{
+    font-size: 26px;
+    color: #3A3A3A;
+}
+nav a, .fas{
+    font-size: 18px;
+    margin-right: 30px;
+    text-decoration: none;
+    color: #3A3A3A
+}
+
+/*---------------------
+    Banner Area Style  
+-----------------------*/
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-title{
+    font-size: 55px;
+    color: #3A3A3A;
+}
+.banner-text{
+    font-size: 17px;
+    color: #3A3A3A;
+    width: 70%;
+    margin:20px 0px;
+}
+.pink-button{
+    font-size: 17px;
+    color: #fff;
+    background: #E02C6D;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+}
+
+/*----------------------
+   Gallery Area Style  
+------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:688px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .banner{
+        flex-direction: column;
+    }
+}
