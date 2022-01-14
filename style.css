@@ -34,9 +34,23 @@ nav a, .fas{
     font-size: 18px;
     margin-right: 30px;
     text-decoration: none;
-    color: #3A3A3A
+    color: #3A3A3A;
+    padding:3px 5px;
+    transition: .4s ease-in-out;
 }
-
+nav a:hover{
+    border-bottom: 3.5px solid #E02C6D;
+    border-radius: 0px 0px 18px 0px;
+    color: #E02C6D;
+}
+nav .fas:hover{
+    color: #E02C6D;
+}
+.active{
+    border-bottom: 3.5px solid #E02C6D;
+    border-radius: 0px 0px 18px 0px;
+    color: #E02C6D;
+}
 /*---------------------
     Banner Area Style  
 -----------------------*/
@@ -61,38 +75,201 @@ nav a, .fas{
     color: #fff;
     background: #E02C6D;
     padding: 10px 30px;
-    border: none;
+    border: 3px solid #E02C6D;
     border-radius: 30px;
+    transition: .3s linear;
+    font-weight: 600;
+}
+.pink-button:hover{
+    background: transparent;
+    color: #E02C6D;
 }
 
 /*----------------------
    Gallery Area Style  
 ------------------------*/
+.Collection{
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.collect-title{
+    font-size: 40px;
+    color: #3A3A3A;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.gallerys{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 40px;
+    align-items: center;
+}
+.gallery{
+    width: 300px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(233, 226, 226);
+}
+.gallery-title h1{
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+.gallery-title .price{
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.gallery-title .fas{
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    color: #FB8200;
+}
+.gallery-title .rating{
+    color: #787885;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.gallery-title .gallery-text{
+    color: #787885;
+    padding: 2px 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.content{
+    position: relative;
+}
+.content::before{
+    content: 'See More \2794';
+    position: absolute;
+    top: 0;
+    left: 78%;
+    font-size: 20px;
+    color: #E02C6D;
+    font-weight: bold;
+}
 
 
+/*-------------
+    Tab Device 
+--------------- */
+@media only screen and (min-width: 688px) and (max-width:1202px){
+    .container{
+        width: 90%;
+    }
+    .header-tite{
+        font-size: 30px;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    nav a, .fas{
+        margin-top: 20px; 
+        font-size: 20px;
+    }
 
 
+    .banner-title{
+        font-size: 40px;
+    }
+    .banner-right img{
+        width: 100%;
+    }
+
+    .gallerys{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Collection{
+        margin: 0 auto;
+    }
+    .gallery{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gallery img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .gallery-title .fas{
+        font-size: 16px;
+    }
+    .gallery-title .rating{
+        font-size: 17px;
+    }
+    .content:before{
+        font-size: 19px;
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*-----------------
+    Moblie Device 
+------------------- */
 
 
 @media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .header-tite{
+        font-size: 40px;
+    }
+    nav{
+        display: flex;
+        flex-direction:column;
+    }
+    nav a, .fas{
+        margin-top: 20px; 
+        font-size: 25px;
+    }
     .navbar{
         flex-direction: column;
     }
+
     .banner{
         flex-direction: column;
+    }
+    .banner-title{
+        font-size: 34px;
+    }
+    .banner-text{
+        text-align: justify;
+        margin-left: 11%;
+    }
+    .banner-left{
+        text-align: center;
+    }
+    .banner-right img{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .gallerys{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Collection{
+        margin: 0 auto;
+    }
+    .gallery{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gallery img{
+        width: 100%;
+    }
+    .gallery-title .fas{
+        font-size: 14px;
+    }
+    .gallery-title .rating{
+        font-size: 15px;
+    }
+    .content:before{
+        font-size: 16px;
+        top: 20px
     }
 }
