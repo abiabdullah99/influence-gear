@@ -67,8 +67,8 @@ nav .fas:hover{
 .banner-text{
     font-size: 17px;
     color: #3A3A3A;
-    width: 70%;
     margin:20px 0px;
+    text-transform:capitalize;
 }
 .pink-button{
     font-size: 17px;
@@ -83,6 +83,58 @@ nav .fas:hover{
 .pink-button:hover{
     background: transparent;
     color: #E02C6D;
+}
+.banner-left{
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    height: 100%;
+    padding:12px 20px;
+}
+
+/*--------------------------
+    Border Animation Style  
+----------------------------*/
+.border{
+    background-color: #E02C6D;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 100%;
+}
+.border.left, .border.right{
+    height: 100%;
+    width: 4px;
+}
+.border.top{
+    top: 1px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 0px;
+    left: 100%;
+}
+.border.left{
+    left: 0px;
+    top: 100%;
+}
+.border.right{
+    right: 0px;
+    bottom: 100%;
+}
+.banner-left:hover .border.top{
+    right: 0px;
+}
+.banner-left:hover .border.bottom{
+    left: 0px;
+}
+.banner-left:hover .border.left{
+    top: 5px;
+}
+.banner-left:hover .border.right{
+    bottom: 0px;
 }
 
 /*----------------------
@@ -140,24 +192,18 @@ nav .fas:hover{
     font-weight: 600;
     font-size: 15px;
 }
-
 .content{
-    position: relative;
-    margin-bottom: 150px;
-}
-.content::before{
-    content: 'See More \2794';
-    position: absolute;
-    top: 0;
-    left: 78%;
     font-size: 20px;
     color: #E02C6D;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    max-width: 1070px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
-
-
-
 
 /* contact Area Strat-- */
 .contact-form{
@@ -303,16 +349,21 @@ footer p{
     .gallery-title .rating{
         font-size: 17px;
     }
-    .content:before{
-        font-size: 19px;
+    .content{
+        width: 90%;
+        margin-top: 40px;
+    }
+    .from{
+        flex-direction: column;
+    }
+    .contact-image{
+        width: 80%;
     }
 }
-
 
 /*-----------------
     Moblie Device 
 ------------------- */
-
 
 @media only screen and (max-width:688px) {
     .container{
@@ -328,6 +379,9 @@ footer p{
     nav a, .fas{
         margin-top: 20px; 
         font-size: 25px;
+    }
+    .pink-button{
+        padding: 5px 10px;
     }
     .navbar{
         flex-direction: column;
@@ -369,11 +423,14 @@ footer p{
     .gallery-title .rating{
         font-size: 15px;
     }
-    .content:before{
-        font-size: 16px;
-        top: 20px
+    .content{
+        width: 90%;
+        margin-top: 40px;
     }
     .from{
         flex-direction: column;
     }
+   .contact-image{
+    width: 80%;
+   }
 }
